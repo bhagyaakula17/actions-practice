@@ -1,0 +1,14 @@
+name: Sample Workflow
+
+on: [push]
+
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo passwd file
+        run: echo "First Workflow Job"
+      - name: multiple commands
+        run: |
+          cat /etc/system-release
+          cat /etc/hosts
