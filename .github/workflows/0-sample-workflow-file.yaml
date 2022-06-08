@@ -10,5 +10,5 @@ jobs:
         run: echo "First Workflow Job"
       - name: multiple commands
         run: |
-          cat /etc/resolve.conf
+          hostname
           cat /etc/hosts
