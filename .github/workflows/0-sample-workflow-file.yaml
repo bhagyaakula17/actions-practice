@@ -4,13 +4,13 @@ on: [push]
 
 jobs:
   run-shell-command:
-    runs-on: centos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Print Message
         run: echo "First Workflow Job"
       - name: multiple commands
         run: |
           hostname
-          cat /etc/passwd
+          ls -l /
           cat /etc/hosts
           uptime
