@@ -14,6 +14,7 @@ jobs:
       - name: Running Few Shell Commands
         run: |
           hostname
+          echo "$SHELL"
           date
           uptime
           ls -l /
