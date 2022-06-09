@@ -15,3 +15,10 @@ jobs:
           date
           uname -a
           ls -l /
+  run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display OS Release
+        run: |
+          uname -r
+          hostname
