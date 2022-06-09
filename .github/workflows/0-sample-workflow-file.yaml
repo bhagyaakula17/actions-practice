@@ -16,5 +16,5 @@ jobs:
           hostname
           date
           uptime
-          ls -l /root
+          ls -l /
           cat /etc/hosts
