@@ -1,24 +1,20 @@
-name: CI/CD Pipelines
+CI/CD Workflow:
 
 on: ['push']
 
 jobs:
-  execute-pipeline:
+  display-my-name:
     runs-on: ubuntu-latest
     steps:
-      - name: display message
-        run: echo "Hello Sasi"
-      - name: runs multiple commands
-        run: |
-          hostname
-          uptime
-          date
-          uname -a
-          ls -l /
+      - name: Display my name
+        run: echo "Hello Sasi Kanth"
   run-shell-commands:
     runs-on: ubuntu-latest
     steps:
-      - name: Display OS Release
+      - name: Running Few Shell Commands
         run: |
-          node -v
-          npm -v
+          hostname
+          date
+          uptime
+          ls -l /root
+          cat /etc/hosts
