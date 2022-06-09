@@ -23,9 +23,12 @@ jobs:
         shell: sh
   run-powershell-commands:
     runs-on: windows-latest
+    needs: ["run-shell-commands"]
     steps:
       - name: Working Dir
         run: Get-Location
       - name: Run Bash shell
         run: pwd
         shell: bash
+# Jobs will run parallelly, if we have a dependency like after completion of one job the other should start, in that case we will fallow like below.
+# needs[] key, we can mention the job names in needs[] array, then once the mentioned jobs complete, then only the other jobs will run. 
