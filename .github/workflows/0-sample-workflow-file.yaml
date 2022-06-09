@@ -1,16 +1,17 @@
-name: Shell Commands
+name: CI/CD Pipelines
 
-on: [push]
+on: ['push']
 
 jobs:
-  run-shell-commands:
+  execute-pipeline:
     runs-on: ubuntu-latest
     steps:
-      - name: echo a string
-        run: echo "Hello World"
-      - name: display hostname
+      - name: display message
+        run: echo "Hello Sasi"
+      - name: runs multiple commands
         run: |
           hostname
+          uptime
           date
           uname -a
-          uptime
+          ls -l /
