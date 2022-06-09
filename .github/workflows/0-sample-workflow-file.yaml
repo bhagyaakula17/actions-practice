@@ -20,5 +20,5 @@ jobs:
     steps:
       - name: Display OS Release
         run: |
-          uname -r
-          hostname
+          node -v
+          npm -v
