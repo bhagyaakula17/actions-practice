@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo a string
-          echo "Hello World"
+        run: echo "Hello World"
       - name: display hostname
         run: |
           hostname
