@@ -1,5 +1,6 @@
 name: CI/CD Workflow
-
+#Running 3 jobs here, Def shell in windows is Powershell, and we can use bash as well in windows.
+#
 on: ['push']
 
 jobs:
@@ -20,3 +21,11 @@ jobs:
           ls -l /
           cat /etc/hosts
         shell: sh
+  run-powershell-commands:
+    runs-on: windows-latest
+    steps:
+      - name: Working Dir
+        run: Get-Location
+      - name: Run Bash shell
+        run: pwd
+        shell: bash
