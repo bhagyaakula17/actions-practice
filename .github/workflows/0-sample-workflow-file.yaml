@@ -1,16 +1,16 @@
-name: Sample Workflow
+name: Shell Commands
 
 on: [push]
 
 jobs:
-  run-shell-command:
+  run-shell-commands:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Message
-        run: echo "First Workflow Job"
-      - name: multiple commands
+      - name: echo a string
+        echo "Hello World"
+      - name: display hostname
         run: |
           hostname
-          ls -l /
-          cat /etc/hosts
+          date
+          uname -a
           uptime
