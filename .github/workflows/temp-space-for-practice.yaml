@@ -1,0 +1,16 @@
+#temp-space for Practice:
+
+name: CI/CD
+
+on: ["push"]
+
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Display Date & Time
+      run: date
+    - name: Print system arc and other details
+      run: |
+        uname -a
+        ls -l /
+        
