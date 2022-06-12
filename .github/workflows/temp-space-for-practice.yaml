@@ -14,3 +14,13 @@ jobs:
         run: |
           uname -a
           ls -l /
+  run-dependant-job:
+    runs-on: ubuntu-latest
+    needs: "run-temp-shell-commands"
+    steps:
+      - name: wait for previous
+        run: |
+          pwd
+          echo "Test After aboce job completes"
+        
+
