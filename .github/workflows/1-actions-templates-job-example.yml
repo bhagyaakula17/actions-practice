@@ -1,0 +1,12 @@
+name: actions-job
+
+on: ["push"]
+
+jobs:
+  run-actions-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone a template
+        uses: actions/hello-world-javascript-action@v1.1
+#There are few predefined templates which does some actions for us. we can find them here: https://github.com/actions.
+#In the above example, we are just calling a template which Greets a person.        
