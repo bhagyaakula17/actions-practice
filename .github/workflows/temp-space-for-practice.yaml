@@ -10,8 +10,9 @@ jobs:
     steps:
       - name: display hostname and copy to my-hosts file
         run: |
-          echo `hostname` > /etc/myhostname
+          echo `hostname` > myhostname
           date
+          cat myhostname
   display-host-name-from-file:
     needs: get-system-arch
     runs-on: ubuntu-latest
