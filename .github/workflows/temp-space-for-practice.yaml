@@ -1,26 +1,19 @@
 #temp-space for Practice:
 
-name: CI/CD
+name: Product Release
 
 on: ["push"]
 
 jobs:
-  run-temp-shell-commands:
+  get-system-arch:
     runs-on: ubuntu-latest
     steps:
-      - name: Display Date & Time
-        run: date
-      - name: Print system arc and other details
+      - name: display hostname and copy to my-hosts file
         run: |
-          uname -a
-          ls -l /
-  run-dependant-job:
-    runs-on: ubuntu-latest
-    needs: "run-temp-shell-commands"
+          echo `hostname` > /etc/myhostname
+          date
+  display-host-name-from-file:
+    needs: get-system-arch
     steps:
-      - name: wait for previous
-        run: |
-          pwd
-          echo "Test After aboce job completes"
-        
-
+      - name: display file content for hostname
+        run: cat /etc/myhostname

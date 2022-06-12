@@ -32,3 +32,4 @@ jobs:
         shell: bash
 # Jobs will run parallelly, if we have a dependency like after completion of one job the other should start, in that case we will fallow like below.
 # needs[] key, we can mention the job names in needs[] array, then once the mentioned jobs complete, then only the other jobs will run. 
+#in the job we can run generatl shell commands as well as Actions, means we can clone a repo on our runner and perform some actions. we call them as Actions. Actions & CMD is a job.
