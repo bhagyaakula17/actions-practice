@@ -1,3 +1,10 @@
+#There are few predefined templates which does some actions for us. we can find them here: https://github.com/actions.
+#In the above example, we are just calling a template which Greets a person.
+#We can call with branch/version/commit id. ie,  
+#actions/hello-world-javascript-action@v1.1 (or)
+#actions/hello-world-javascript-action@master (or)
+#actions/hello-world-javascript-action@       
+
 name: actions-job
 
 on: ["push"]
@@ -7,6 +14,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: clone a template
+        id: justGreet
         uses: actions/hello-world-javascript-action@v1.1
-#There are few predefined templates which does some actions for us. we can find them here: https://github.com/actions.
-#In the above example, we are just calling a template which Greets a person.        
+        with:
+          who-to-greet: SasiKanth Akula
+      - name: Display message
+        run: "${{ steps.justGreet.outputs.time }}"
+
+
