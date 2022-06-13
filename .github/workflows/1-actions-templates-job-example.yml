@@ -10,7 +10,7 @@ jobs:
         id: justGreet
         uses: actions/hello-world-javascript-action@v1.1
         with:
-          who-to-greet: SasiKanth Akula
+          who-to-greet: SasiKanthAkula
       - name: Display message
         run: "${{ steps.justGreet.outputs.time }}"
 
