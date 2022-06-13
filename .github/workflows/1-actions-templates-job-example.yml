@@ -12,6 +12,6 @@ jobs:
         with:
           who-to-greet: SasiKanthAkula
       - name: Display message
-        run: "${{ steps.justGreet.outputs.time }}"
+        run: echo "${{ steps.justGreet.outputs.time }}"
 
 
